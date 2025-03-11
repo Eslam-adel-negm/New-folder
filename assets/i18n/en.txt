@@ -1,0 +1,33 @@
+{
+  "Resources": {
+    "VerificationTitle": "Verification",
+    "EmptyTitle": "Currently, no offers are available.",
+    "EmptyDesc": "Please check back later.",
+    "FrontID": "Front of Your ID",
+    "BackID": "Back of Your ID",
+    "EnterIDNumber": "Enter ID Number",
+    "NationalID": "National ID",
+    "NationalIDValidation": "The Egyptian ID must be exactly 14 digits long."
+
+  },
+  "Buttons": {
+    "Done": "Done",
+    "Submit": "Submit",
+    "Cancel": "Cancel",
+    "Confirm": "Confirm",
+    "Change": "Change",
+    "Upload": "Upload"
+  },
+  "Labels": {
+  },
+  "Validations": {
+    "StartsWith01": "Invalid number",
+    "DialIsRequired": "Please enter your mobile number"
+  },
+  "Errors": {
+    "Title": "Request cannot be completed",
+    "General": "Request cannot be completed, please try again"
+  },
+  "Success": {
+  }
+}

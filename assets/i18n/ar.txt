@@ -1,0 +1,32 @@
+{
+  "Resources": {
+    "VerificationTitle": "تحقيق",
+    "EmptyTitle": "حاليًا، لا توجد عروض متاحة.",
+    "EmptyDesc": "يرجى التحقق مرة أخرى لاحقًا.",
+    "FrontID": "واجهة بطاقتك الشخصية",
+    "BackID": "ظهر بطاقة الهوية الخاصة بك",
+    "EnterIDNumber": "أدخل رقم الهوية",
+    "NationalID": "رقم الهوية",
+    "NationalIDValidation": "يجب أن يتكون رقم الهوية المصرية من 14 رقمًا بالضبط."
+  },
+  "Buttons": {
+    "Done": "تم",
+    "Submit": "ارسال",
+    "Cancel": "إلغاء",
+    "Confirm": "تأكيد",
+    "Change": "تغير",
+    "Upload": "رفع"
+  },
+  "Labels": {
+  },
+  "Validations": {
+    "StartsWith01": "الرقم غير صحيح",
+    "DialIsRequired": "أدخل رقم الهاتف المحمول"
+  },
+  "Errors": {
+    "Title": "لا يمكن تنفيذ طلبك الان",
+    "General": "لا يمكن تنفيذ طلبك الان, برجاء المحاولة مرة اخرى"
+  },
+  "Success": {
+  }
+}
