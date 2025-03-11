@@ -1,0 +1,190 @@
+<section class="main-section page-wrapper">
+    <div class="page-wrapper__top">
+        <div class="offer-header">
+            <h4 class="offer-name">
+                <a class="btn-back-page reverse-rtl border-0" routerLink="/" queryParamsHandling="preserve">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_b_513_123)">
+                            <circle cx="20" cy="20" r="20" fill="white" fill-opacity="0.1" />
+                            <circle cx="20" cy="20" r="19.5" stroke="url(#paint0_linear_513_123)" />
+                        </g>
+                        <g clip-path="url(#clip0_513_123)">
+                            <path d="M21.3492 24.5833L16.9841 20L21.3492 15.4167" stroke="white" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_b_513_123" x="-4" y="-4" width="48" height="48"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feGaussianBlur in="BackgroundImageFix" stdDeviation="2" />
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_513_123" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_513_123"
+                                    result="shape" />
+                            </filter>
+                            <linearGradient id="paint0_linear_513_123" x1="4.46483" y1="-8.57141" x2="43.1484"
+                                y2="-6.73257" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FFFCFA" />
+                                <stop offset="1" stop-color="white" stop-opacity="0" />
+                            </linearGradient>
+                            <clipPath id="clip0_513_123">
+                                <rect width="20" height="20" fill="white" transform="translate(10 10)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+                <span class="page-title">B2B Voucher Request</span>
+                <div style="width: 40px;"></div>
+            </h4>
+        </div>
+    </div>
+    <div class="page-content">
+        <p class="page-desc">Choose ONLY one of the below fields</p>
+        <div class="share-to-wrapper text-start">
+            <form #SentTo="ngForm" (ngSubmit)="onSubmit(SentTo)">
+                <label class="sent-to__border" for="mobile" [ngClass]="{'disabled-parent': accountNumber.value}">
+                    <div class="sent-to__icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="20" fill="#FFF1E5" />
+                            <g clip-path="url(#clip0_973_355)">
+                                <path
+                                    d="M16.25 17.5C18.1485 17.5 19.6875 15.961 19.6875 14.0625C19.6875 12.164 18.1485 10.625 16.25 10.625C14.3515 10.625 12.8125 12.164 12.8125 14.0625C12.8125 15.961 14.3515 17.5 16.25 17.5Z"
+                                    stroke="#F16E00" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M10.625 24.375C10.6254 23.1686 11.0137 21.9942 11.7325 21.0253C12.4513 20.0564 13.4626 19.3443 14.617 18.9941C15.7715 18.6438 17.008 18.6741 18.1439 19.0803C19.2799 19.4865 20.2552 20.2471 20.9258 21.25"
+                                    stroke="#F16E00" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M26.25 26.5625C26.3118 26.5625 26.3722 26.5808 26.4236 26.6152C26.475 26.6495 26.5151 26.6983 26.5387 26.7554C26.5624 26.8125 26.5686 26.8753 26.5565 26.936C26.5444 26.9966 26.5147 27.0523 26.471 27.096C26.4273 27.1397 26.3716 27.1694 26.311 27.1815C26.2503 27.1936 26.1875 27.1874 26.1304 27.1637C26.0733 27.1401 26.0245 27.1 25.9902 27.0486C25.9558 26.9972 25.9375 26.9368 25.9375 26.875C25.9375 26.7921 25.9704 26.7126 26.029 26.654C26.0876 26.5954 26.1671 26.5625 26.25 26.5625Z"
+                                    stroke="#F16E00" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M28.125 19.375H24.375C23.6846 19.375 23.125 19.9346 23.125 20.625V28.125C23.125 28.8154 23.6846 29.375 24.375 29.375H28.125C28.8154 29.375 29.375 28.8154 29.375 28.125V20.625C29.375 19.9346 28.8154 19.375 28.125 19.375Z"
+                                    stroke="#F16E00" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_973_355">
+                                    <rect width="20" height="20" fill="white" transform="translate(10 10)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="input-wrapper">
+                        <label class="sent-to__focusLabel" *ngIf="phoneNumber.value" [@giftInfoAnimation]>Mobile
+                            Number</label>
+                        <input 
+                        type="tel"
+                        class="share-to__input allow-select"
+                        id="mobile"
+                        placeholder="Mobile Number"
+                        pattern="^01[0125][0-9]{8}$"
+                        maxlength="11"
+                        minlength="11"
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '');"
+                        name="phoneNumber"
+                        #phoneNumber="ngModel"
+                        ngModel>
+                    </div>
+                </label>
+
+                <div class="dividing-line">
+                    <span>Or</span>
+                </div>
+
+                <label class="sent-to__border" for="accountNumber" [ngClass]="{'disabled-parent': phoneNumber.value}">
+                    <div class="sent-to__icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="20" fill="#FFF1E5"/>
+                            <g clip-path="url(#clip0_195_1710)">
+                            <path d="M11.0968 24.2333C11.2929 25.5923 12.4132 26.65 13.7809 26.7719C15.7866 26.9505 17.8671 27.1429 20 27.1429C22.1329 27.1429 24.2134 26.9505 26.219 26.7719C27.5867 26.65 28.7071 25.5923 28.9033 24.2333C29.1011 22.8616 29.2857 21.4465 29.2857 20C29.2857 18.5535 29.1011 17.1385 28.9033 15.7668C28.7071 14.4077 27.5867 13.35 26.219 13.2282C24.2134 13.0496 22.1329 12.8572 20 12.8572C17.8671 12.8572 15.7866 13.0496 13.7809 13.2282C12.4132 13.35 11.2929 14.4077 11.0968 15.7668C10.8988 17.1385 10.7143 18.5535 10.7143 20C10.7143 21.4465 10.8988 22.8616 11.0968 24.2333Z" stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16.4286 22.1429C17.612 22.1429 18.5714 21.1835 18.5714 20C18.5714 18.8166 17.612 17.8572 16.4286 17.8572C15.2451 17.8572 14.2857 18.8166 14.2857 20C14.2857 21.1835 15.2451 22.1429 16.4286 22.1429Z" stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M22.1429 17.8572H25" stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M22.1429 22.1429H25" stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_195_1710">
+                            <rect width="20" height="20" fill="white" transform="translate(10 10)"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                            
+                    </div>
+                    <div class="input-wrapper">
+                        <label class="sent-to__focusLabel" *ngIf="accountNumber.value" [@giftInfoAnimation]>Account Number</label>
+                        <input 
+                        type="text"
+                        inputmode="decimal"
+                        class="share-to__input allow-select"
+                        id="accountNumber"
+                        placeholder="Account Number"
+                        maxlength="21"
+                        minlength="1"
+                        maxlength="21"
+                        pattern="^\d+(\.\d+)*$"
+                        oninput="this.value = this.value.replace(/[^0-9.]/g, '')"
+                        name="accountNumber"
+                        #accountNumber="ngModel"
+                        ngModel>
+                    </div>
+                </label>
+            </form>
+        </div>
+        
+    </div>
+    
+    <div class="page-wrapper__bottom">
+        <button class="w-100 btn btn-primary btn-gradient" [disabled]="(SentTo.invalid || !phoneNumber.value) && (SentTo.invalid || !accountNumber.value)"
+            (click)="onSubmit(SentTo)">Proceed</button>
+    </div>
+</section>
+
+<!-- popup OTP  -->
+<div *ngIf="showOtp" class="Offer-details_modal">
+    <div class="Offer-details_close"></div>
+    <div class="Offer-details_content">
+        <div class="offer-details_head">
+            <p class="offer-popup__title">OTP</p>
+            <a class="btn_close" *ngIf="showOtp" (click)="CloseOtp()">
+                <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20.5" cy="20" r="19.5" fill="white" stroke="#F0EEED" />
+                    <path d="M15.5 25L25.5 15" stroke="#24180E" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M25.5 25L15.5 15" stroke="#24180E" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </a>
+        </div>
+
+        <p class="offer-popup__desc">Please enter your OTP to Confirm</p>
+
+        <div class="otp_inputs dir-ltr mb-4">
+            <ng-otp-input #ngOtpInput (onInputChange)="onOtpChange($event)"
+                [config]="{length: otpLength, allowNumbersOnly: true, inputClass: 'OTP__input'}"></ng-otp-input>
+        </div>
+
+        <div class="otp-wrapper">
+            <div class="otp-counter" *ngIf="!showResend">
+                <span class="counter_sec">{{ counter }}</span> Seconds..
+            </div>
+            <a class="otp-resend" *ngIf="showResend" (click)="resendOTP()">Resend OTP</a>
+        </div>
+
+        <div class="mt-3 mb-3 d-flex">
+            <button class="w-100 btn btn-gradient" [disabled]="isButtonDimmed" (click)="ProceedOTP()">Proceed</button>
+        </div>
+    </div>
+</div>
+
+<!-- popup status  -->
+<app-popup
+[show_popup]="showPopup"
+[popup_icon]="PopupIcon"
+[popup_title]="PopupTitle"
+[popup_description]="PopupDescription"
+[popup_id]="PopupId"
+[popup_btn_name]="PopupBtnName"
+[popup_close]="PopupClose"
+(close_popup)="closePopup()"
+(popup_function)="PopupStatusBtnFunction()">
+</app-popup>

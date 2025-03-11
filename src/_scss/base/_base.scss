@@ -1,0 +1,244 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+ :root {
+  box-sizing: border-box;
+}
+
+/**
+     * Make all elements from the DOM inherit from the parent box-sizing
+     * Since `*` has a specificity of 0, it does not override the `html` value
+     * making all elements inheriting from the root box-sizing value
+     * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+     */
+// *,
+// *::before,
+// *::after {
+//   box-sizing: inherit;
+// }
+
+/**
+     * Basic styles for Body
+     */
+html {
+  font-size: 14px;
+}
+
+body {
+  background-color: #fff;
+}
+
+/**
+     * Basic styles for links
+     */
+a {
+  color: $text-color;
+  text-decoration: none;
+  cursor: pointer;
+
+  @include on-event {
+    color: $text-color;
+    text-decoration: none;
+  }
+}
+
+/**
+     * Basic styles for lists
+     */
+ul {
+  // list-style: none;
+  // padding: 0;
+  // margin: 0;
+}
+
+/**
+     * Basic styles for headings
+     */
+
+/// @type h2
+.main-title, h2 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/// @type h3
+.section-title {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+/// @type h4
+h4 {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  font-weight: bold;
+}
+
+/// @type h5
+h5 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.section-description {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/**
+     * Common styles
+     */
+.orange {
+  color: $brand-color !important;
+}
+
+.shadow {
+  box-shadow: 0 .15rem 1.75rem 0 rgba(58, 59, 69, .15);
+}
+
+hr {
+  color: $mid-grey;
+  opacity: 1;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  width: 100%;
+}
+
+/**
+     * Scrollbar styles
+     */
+
+/// width
+::-webkit-scrollbar {
+  width: 5px;
+  margin-right: 5px;
+}
+
+/// Track
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/// Handle
+::-webkit-scrollbar-thumb {
+  background: $grey-200;
+}
+
+/// Handle on hover
+::-webkit-scrollbar-thumb:hover {
+  background: $dark-grey;
+}
+
+/**
+     * Placeholder styles
+     */
+
+// ::-webkit-input-placeholder {
+//   /* Edge */
+//   font-weight: bold;
+// }
+
+// :-ms-input-placeholder {
+//   /* Internet Explorer 10-11 */
+//   font-weight: bold;
+// }
+
+// ::placeholder {
+//   font-weight: bold;
+// }
+
+
+// modal on rtl
+.modal {
+  .modal-header {
+    .btn-close {
+      margin-inline-start: auto;
+      margin: 0;
+    }
+  }
+}
+
+// reverse rtl
+.reverse-rtl {
+  @include when-inside-rtl {
+    transform: rotate(180deg);
+  }
+}
+
+.dir-ltr {
+  direction: ltr;
+}
+
+// font size 12px
+.fs-12 {
+  font-size: 12px;
+}
+
+
+//// text selection transparent
+
+* {
+  user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+   &::selection {
+    background-color: transparent;
+  }
+}
+
+input {
+  user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+img {
+  -webkit-user-select:none;
+  -webkit-touch-callout:none;
+}
+
+
+
+
+/* Allow text selection for specific elements */
+.allow-select {
+  user-select: text;
+  -webkit-user-select: text;
+  &::selection {
+    background-color: #ACCEF7 ;
+  }
+}
+
+.red-star {
+  color: red;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-content: center;
+}
+
+.text-gray {
+  color: #948F8D;
+}
+
+.text-center {
+  text-align: center;
+}

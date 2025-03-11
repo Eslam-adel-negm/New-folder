@@ -1,0 +1,51 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+// $fontPath: "/Pages/AmazonLoyality/assets/Fonts";
+$fontPath: "/assets/Fonts";
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('#{$fontPath}/HelvNeue55_W1G.eot');
+    src: url('#{$fontPath}/HelvNeue55_W1G.eot?#iefix') format('embedded-opentype'),
+        // url('#{$fontPath}/HelvNeue55_W1G.woff2') format('woff2'),
+        url('#{$fontPath}/HelvNeue55_W1G.woff') format('woff'),
+        url('#{$fontPath}/HelvNeue55_W1G.ttf') format('truetype');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('#{$fontPath}/HelvNeue75_W1G.eot');
+    src: url('#{$fontPath}/HelvNeue75_W1G.eot?#iefix') format('embedded-opentype'),
+        // url('#{$fontPath}/HelvNeue75_W1G.woff2') format('woff2'),
+        url('#{$fontPath}/HelvNeue75_W1G.woff') format('woff'),
+        url('#{$fontPath}/HelvNeue75_W1G.ttf') format('truetype');
+    font-weight: bold;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue AR';
+    src: url('#{$fontPath}/HelveticaNeueAR-55Roman.eot');
+    src: url('#{$fontPath}/HelveticaNeueAR-55Roman.eot?#iefix') format('embedded-opentype'),
+        // url('#{$fontPath}/HelveticaNeueAR-55Roman.woff2') format('woff2'),
+        url('#{$fontPath}/HelveticaNeueAR-55Roman.woff') format('woff'),
+        url('#{$fontPath}/HelveticaNeueAR-55Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue AR';
+    src: url('#{$fontPath}/HelveticaNeueAR-75Bold.eot');
+    src: url('#{$fontPath}/HelveticaNeueAR-75Bold.eot?#iefix') format('embedded-opentype'),
+        // url('#{$fontPath}/HelveticaNeueAR-75Bold.woff2') format('woff2'),
+        url('#{$fontPath}/HelveticaNeueAR-75Bold.woff') format('woff'),
+        url('#{$fontPath}/HelveticaNeueAR-75Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

@@ -1,0 +1,153 @@
+.points-wrapper {
+  background: linear-gradient(to right, #999796, #0f0f0f);
+  padding: 2px;
+  display: flex;
+  border-radius: 15px;
+  margin-top: 15px;
+  @include when-inside-rtl {
+    background: linear-gradient(to left, #999796, #0f0f0f);
+  }
+  .points-content {
+    background: linear-gradient(to right, #101010, #0f0f0f);
+    color: #fff;
+    border-radius: 15px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include when-inside-rtl {
+      background: linear-gradient(to left, #101010, #0f0f0f);
+    }
+    .points-title {
+      font-size: 14px;
+      margin: 0;
+    }
+    span {
+      display: block;
+      b {
+        font-size: 20px;
+      }
+      font-size: 13px;
+    }
+  }
+}
+
+.voucher-wrapper {
+  border: 1px solid #F0EEED;
+  border-radius: 15px;
+  position: relative;
+  padding: 15px;
+  margin-bottom: 20px;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url('#{$bgPath}/voucher-paper.jpg');
+    left: -1px;
+    top: 15px;
+    bottom: 15px;
+    width: 7px;
+    background-size: 6px;
+    background-repeat: repeat-y;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url('#{$bgPath}/voucher-paper.jpg');
+    right: -1px;
+    top: 15px;
+    bottom: 15px;
+    width: 7px;
+    background-size: 6px;
+    background-repeat: repeat-y;
+    transform: scaleX(-1);
+  }
+  .voucher-content {
+    .voucher_top {
+      padding-bottom: 15px;
+      border-bottom: 2px dashed #F0EEED;
+      display: flex;
+      .voucher-icon {
+        display: flex;
+        align-items: center;
+        margin-inline-end: 10px;
+        svg {
+
+        }
+      }
+      .voucher-content {
+        p {
+          margin: 0px;
+        }
+        .voucher_currency {
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+        .voucher_Points {
+          color: #948F8D;
+        }
+      }
+    }
+    .voucher_bottom {
+      color: #F16E00;
+      text-align: center;
+      padding-top: 15px;
+    }
+  }
+}
+
+
+.collapsible-item {
+  border: 1px solid #F0EEED;
+  border-radius: 15px;
+
+  .header {
+    font-weight: bold;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .arrow {
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    &.expanded {
+      transform: rotate(180deg);
+    }
+  }
+
+  .body {
+    overflow: hidden;
+    background-color: #fff;
+    padding: 0 15px;
+    ul {
+      border-top: 1px solid #F0EEED;
+      color: #948F8D;
+      margin: 0;
+      padding: 12px 0px;
+      padding-inline-start: 20px;
+      font-size: 12px;
+      li {
+
+      }
+    }
+  }
+}
+
+.error-section {
+  text-align: center;
+  margin: 50px 0;
+  svg {
+    margin-bottom: 5px;
+  }
+  p {
+    a {
+      color: #F16E00 !important;
+      text-decoration: underline !important;
+      display: inline-block;
+    }
+  }
+}

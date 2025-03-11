@@ -1,0 +1,18 @@
+<app-loader></app-loader>
+
+
+<router-outlet></router-outlet>
+
+
+<!-- popup status  -->
+<app-popup
+  [show_popup]="showPopup"
+  [popup_icon]="PopupIcon"
+  [popup_title]="PopupTitle"
+  [popup_description]="PopupDescription"
+  [popup_id]="PopupId" 
+  [popup_btn_name]="PopupBtnName" 
+  [popup_close]="PopupClose"
+  (close_popup)="closePopup()" 
+  (popup_function)="PopupStatusBtnFunction()">
+</app-popup>
