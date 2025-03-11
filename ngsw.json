@@ -1,0 +1,135 @@
+{
+  "configVersion": 1,
+  "timestamp": 1741713024997,
+  "index": "/New-folder/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/New-folder/favicon.ico",
+        "/New-folder/index.html",
+        "/New-folder/main.js",
+        "/New-folder/manifest.webmanifest",
+        "/New-folder/polyfills.js",
+        "/New-folder/runtime.js",
+        "/New-folder/styles.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/New-folder/assets/Fonts/HelvNeue55_W1G.eot",
+        "/New-folder/assets/Fonts/HelvNeue55_W1G.svg",
+        "/New-folder/assets/Fonts/HelvNeue55_W1G.ttf",
+        "/New-folder/assets/Fonts/HelvNeue55_W1G.woff",
+        "/New-folder/assets/Fonts/HelvNeue55_W1G.woff2",
+        "/New-folder/assets/Fonts/HelvNeue75_W1G.eot",
+        "/New-folder/assets/Fonts/HelvNeue75_W1G.svg",
+        "/New-folder/assets/Fonts/HelvNeue75_W1G.ttf",
+        "/New-folder/assets/Fonts/HelvNeue75_W1G.woff",
+        "/New-folder/assets/Fonts/HelvNeue75_W1G.woff2",
+        "/New-folder/assets/Fonts/HelveticaNeueAR-55Roman.eot",
+        "/New-folder/assets/Fonts/HelveticaNeueAR-55Roman.svg",
+        "/New-folder/assets/Fonts/HelveticaNeueAR-55Roman.ttf",
+        "/New-folder/assets/Fonts/HelveticaNeueAR-55Roman.woff",
+        "/New-folder/assets/Fonts/HelveticaNeueAR-55Roman.woff2",
+        "/New-folder/assets/Fonts/HelveticaNeueAR-75Bold.eot",
+        "/New-folder/assets/Fonts/HelveticaNeueAR-75Bold.svg",
+        "/New-folder/assets/Fonts/HelveticaNeueAR-75Bold.ttf",
+        "/New-folder/assets/Fonts/HelveticaNeueAR-75Bold.woff",
+        "/New-folder/assets/Fonts/HelveticaNeueAR-75Bold.woff2",
+        "/New-folder/assets/i18n/ar.txt",
+        "/New-folder/assets/i18n/en.txt",
+        "/New-folder/assets/icons/icon-128x128.png",
+        "/New-folder/assets/icons/icon-144x144.png",
+        "/New-folder/assets/icons/icon-152x152.png",
+        "/New-folder/assets/icons/icon-192x192.png",
+        "/New-folder/assets/icons/icon-384x384.png",
+        "/New-folder/assets/icons/icon-512x512.png",
+        "/New-folder/assets/icons/icon-72x72.png",
+        "/New-folder/assets/icons/icon-96x96.png",
+        "/New-folder/assets/images/confirm.png",
+        "/New-folder/assets/images/error.png",
+        "/New-folder/assets/images/orange-logo-animated.gif",
+        "/New-folder/assets/images/success.png",
+        "/New-folder/assets/images/voucher-paper.jpg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/New-folder/assets/Fonts/HelvNeue55_W1G.eot": "e68d770f4c798cd01958cf2412492d0dd492e089",
+    "/New-folder/assets/Fonts/HelvNeue55_W1G.svg": "52a861107bb5077590e802cecd95829879bf4240",
+    "/New-folder/assets/Fonts/HelvNeue55_W1G.ttf": "c6b944e35da6c5fd9b8d9417ed5fa9b28ce3de97",
+    "/New-folder/assets/Fonts/HelvNeue55_W1G.woff": "c275b978e9bfe335121e2788ca0c85d9337234b8",
+    "/New-folder/assets/Fonts/HelvNeue55_W1G.woff2": "cbf3776944cd3d0e6395584c270b54b0a6e1d078",
+    "/New-folder/assets/Fonts/HelvNeue75_W1G.eot": "a40676eec6db05223a88f057f2a91db31da7d5cf",
+    "/New-folder/assets/Fonts/HelvNeue75_W1G.svg": "fb89e8102de6ec9b638a4ad384a4a5712b528e68",
+    "/New-folder/assets/Fonts/HelvNeue75_W1G.ttf": "8d6fd39d9408d2b8817a2ec19cc7d98e124f8ab1",
+    "/New-folder/assets/Fonts/HelvNeue75_W1G.woff": "b9fe3860b6dec90257fd950c7d1415f0cef5f35f",
+    "/New-folder/assets/Fonts/HelvNeue75_W1G.woff2": "cc72bb1c657b402f81ac13745478cd1cc98d2c51",
+    "/New-folder/assets/Fonts/HelveticaNeueAR-55Roman.eot": "3558d591ee4f9a0a834503220e018ee3f88c0adf",
+    "/New-folder/assets/Fonts/HelveticaNeueAR-55Roman.svg": "b35ead50a3fcf9707654cc80917a92a263927a86",
+    "/New-folder/assets/Fonts/HelveticaNeueAR-55Roman.ttf": "3979d75944babe541fde4a82596003bcbb502b36",
+    "/New-folder/assets/Fonts/HelveticaNeueAR-55Roman.woff": "b1ff83e65920b3e093459aeb8c215e37cbb9aa22",
+    "/New-folder/assets/Fonts/HelveticaNeueAR-55Roman.woff2": "376e493d77a28d664135fd7573e2e0f986cfcb5d",
+    "/New-folder/assets/Fonts/HelveticaNeueAR-75Bold.eot": "f668db626656e4852403dbd67f67544a27e099a9",
+    "/New-folder/assets/Fonts/HelveticaNeueAR-75Bold.svg": "734cfa44c8f49647ffa109846d4314a1108b88b6",
+    "/New-folder/assets/Fonts/HelveticaNeueAR-75Bold.ttf": "dc7a0f0afc563a1bdf0b8606b1aa6ae53b944698",
+    "/New-folder/assets/Fonts/HelveticaNeueAR-75Bold.woff": "a7e9d17958598d5a6f292d2d9f52c9ac9c95c932",
+    "/New-folder/assets/Fonts/HelveticaNeueAR-75Bold.woff2": "8630a9f8cc30e6b4d96c0654c0ddf2523cf16e2c",
+    "/New-folder/assets/i18n/ar.txt": "91ffeb32e03c793ccb725d6478bb7c062ae33296",
+    "/New-folder/assets/i18n/en.txt": "955d0bfed9a6567c7fbc62a98e40748971f259d1",
+    "/New-folder/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/New-folder/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/New-folder/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/New-folder/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/New-folder/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/New-folder/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/New-folder/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/New-folder/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/New-folder/assets/images/confirm.png": "cded1970b6414ff1893336cbe4597fb1b6a5b79e",
+    "/New-folder/assets/images/error.png": "538d8b898c7c836d09bd98283a18342970d99471",
+    "/New-folder/assets/images/orange-logo-animated.gif": "8012c478c0df44d7dde3eb26f0f6b8b2b28e2b9c",
+    "/New-folder/assets/images/success.png": "99a4819913f0c35a1212730e48a4153cc0c485ed",
+    "/New-folder/assets/images/voucher-paper.jpg": "1abc628cc73072fb71e10a9716f5b60e754b43a0",
+    "/New-folder/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/New-folder/index.html": "ecc1b185aadf938e8a827a55f7ccedaa58a016cf",
+    "/New-folder/main.js": "38d8f5972e3b0cb958106cd988111bdf3721622b",
+    "/New-folder/manifest.webmanifest": "c1fc04ae2158494ef339fc64ed34f15f332f282c",
+    "/New-folder/polyfills.js": "4a91c941343950eb48e7ea647a11866e5891a8bb",
+    "/New-folder/runtime.js": "549811bf0fce16e74a1eb63afd02e2a02f25d1bb",
+    "/New-folder/styles.css": "5deb21223d75511fdc3200c1ce5adacf66fa65a3"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
