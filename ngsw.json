@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1741778361232,
+  "timestamp": 1741779313672,
   "index": "/New-folder/index.html",
   "assetGroups": [
     {
@@ -108,7 +108,7 @@
     "/New-folder/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
     "/New-folder/index.html": "f825a339b0d4e303f54027ebe2da3fa6719173c4",
     "/New-folder/main.js": "38d8f5972e3b0cb958106cd988111bdf3721622b",
-    "/New-folder/manifest.webmanifest": "c879b88378e3e2b95ec4d3a601600225a2e06e15",
+    "/New-folder/manifest.webmanifest": "9ec9c1dbb7e704bb1d2765fd72b55a662aa72f3c",
     "/New-folder/polyfills.js": "4a91c941343950eb48e7ea647a11866e5891a8bb",
     "/New-folder/runtime.js": "549811bf0fce16e74a1eb63afd02e2a02f25d1bb",
     "/New-folder/styles.css": "f77edb8a9054f253fde2882b13d547086277de14"

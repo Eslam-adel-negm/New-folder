@@ -3,7 +3,7 @@
   "short_name": "AmazonLoyality-UI",
   "theme_color": "#000000",
   "background_color": "#fafafa",
-  "display": "fullscreen",
+  "display": "standalone",
   "scope": "./",
   "start_url": "./",
   "icons": [
