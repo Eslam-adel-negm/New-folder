@@ -16,7 +16,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: red !important;
     @include when-inside-rtl {
       background: linear-gradient(to left, #101010, #0f0f0f);
     }
