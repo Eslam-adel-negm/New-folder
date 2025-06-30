@@ -1129,7 +1129,6 @@ html[dir=rtl] .points-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: red !important;
 }
 html[dir=rtl] .points-wrapper .points-content {
   background: linear-gradient(to left, #101010, #0f0f0f);
