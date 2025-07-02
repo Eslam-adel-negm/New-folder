@@ -25,6 +25,9 @@ export class HomeComponent implements OnInit {
 
   isExpanded = false;
   previewUrl: string | null = null;
+  latitude: number | null = null;
+  longitude: number | null = null;
+  error: string | null = null;
 
   /// otp
   showOtp: boolean = false;
@@ -68,6 +71,25 @@ export class HomeComponent implements OnInit {
         this.previewUrl = reader.result as string;
       };
       reader.readAsDataURL(file); // convert image to base64 for preview
+    }
+  }
+
+  getLocation(): void {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        position => {
+          this.latitude = position.coords.latitude;
+          this.longitude = position.coords.longitude;
+          this.error = null;
+        },
+        error => {
+          this.error = 'Unable to retrieve location.';
+          this.latitude = null;
+          this.longitude = null;
+        }
+      );
+    } else {
+      this.error = 'Geolocation is not supported by this browser.';
     }
   }
 

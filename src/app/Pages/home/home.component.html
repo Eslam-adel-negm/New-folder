@@ -1,182 +1,236 @@
 <section class="main-section page-wrapper">
-    <div class="page-wrapper__top">
-      <div class="offer-header">
-        <h4 class="offer-name">
-          <a class="btn-back-page reverse-rtl border-0" (click)="ToDashboard()">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g filter="url(#filter0_b_513_123)">
-                <circle cx="20" cy="20" r="20" fill="white" fill-opacity="0.1" />
-                <circle cx="20" cy="20" r="19.5" stroke="url(#paint0_linear_513_123)" />
-              </g>
-              <g clip-path="url(#clip0_513_123)">
-                <path d="M21.3492 24.5833L16.9841 20L21.3492 15.4167" stroke="white" stroke-width="1.5"
-                  stroke-linecap="round" stroke-linejoin="round" />
-              </g>
-              <defs>
-                <filter id="filter0_b_513_123" x="-4" y="-4" width="48" height="48" filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feGaussianBlur in="BackgroundImageFix" stdDeviation="2" />
-                  <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_513_123" />
-                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_513_123" result="shape" />
-                </filter>
-                <linearGradient id="paint0_linear_513_123" x1="4.46483" y1="-8.57141" x2="43.1484" y2="-6.73257"
-                  gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#FFFCFA" />
-                  <stop offset="1" stop-color="white" stop-opacity="0" />
-                </linearGradient>
-                <clipPath id="clip0_513_123">
-                  <rect width="20" height="20" fill="white" transform="translate(10 10)" />
-                </clipPath>
-              </defs>
-            </svg>
-          </a>
-          <span class="page-title">AmazonLoyality Vouchers</span>
-          <div style="width: 40px;"></div>
-        </h4>
+  <div class="page-wrapper__top">
+    <div class="offer-header">
+      <h4 class="offer-name">
+        <a class="btn-back-page reverse-rtl border-0" (click)="ToDashboard()">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_b_513_123)">
+              <circle cx="20" cy="20" r="20" fill="white" fill-opacity="0.1" />
+              <circle cx="20" cy="20" r="19.5" stroke="url(#paint0_linear_513_123)" />
+            </g>
+            <g clip-path="url(#clip0_513_123)">
+              <path d="M21.3492 24.5833L16.9841 20L21.3492 15.4167" stroke="white" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+            <defs>
+              <filter id="filter0_b_513_123" x="-4" y="-4" width="48" height="48" filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feGaussianBlur in="BackgroundImageFix" stdDeviation="2" />
+                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_513_123" />
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_513_123" result="shape" />
+              </filter>
+              <linearGradient id="paint0_linear_513_123" x1="4.46483" y1="-8.57141" x2="43.1484" y2="-6.73257"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FFFCFA" />
+                <stop offset="1" stop-color="white" stop-opacity="0" />
+              </linearGradient>
+              <clipPath id="clip0_513_123">
+                <rect width="20" height="20" fill="white" transform="translate(10 10)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        <span class="page-title">AmazonLoyality Vouchers</span>
+        <div style="width: 40px;"></div>
+      </h4>
 
-        <div class="points-wrapper">
-            <div class="points-content">
-                <p class="points-title">My Points</p>
-                <span><b>7,500</b> Points</span>
-            </div>
+      <div class="points-wrapper">
+        <div class="points-content">
+          <p class="points-title">My Points</p>
+          <span><b>7,500</b> Points</span>
         </div>
       </div>
     </div>
-    <div class="page-content">
-      <input
-  type="file"
-  accept="image/*"
-  capture="environment"
-  #fileInput
-  (change)="onFileSelected($event)"
-  style="display: none"
-/>
-      <button (click)="fileInput.click()" class="w-100 btn btn-primary btn-gradient" style="margin-bottom: 20px;display: flex;align-items: center;justify-content: center;">
-        <svg xmlns="http://www.w3.org/2000/svg" style="margin-inline-end: 3px;" width="20px" height="20px" viewBox="0 0 24 24" fill="none">
-          <circle cx="12" cy="13" r="3" stroke="#1C274C" stroke-width="1.5" style="&#10;    stroke: #fff;&#10;"/>
-          <path d="M9.77778 21H14.2222C17.3433 21 18.9038 21 20.0248 20.2646C20.51 19.9462 20.9267 19.5371 21.251 19.0607C22 17.9601 22 16.4279 22 13.3636C22 10.2994 22 8.76721 21.251 7.6666C20.9267 7.19014 20.51 6.78104 20.0248 6.46268C19.3044 5.99013 18.4027 5.82123 17.022 5.76086C16.3631 5.76086 15.7959 5.27068 15.6667 4.63636C15.4728 3.68489 14.6219 3 13.6337 3H10.3663C9.37805 3 8.52715 3.68489 8.33333 4.63636C8.20412 5.27068 7.63685 5.76086 6.978 5.76086C5.59733 5.82123 4.69555 5.99013 3.97524 6.46268C3.48995 6.78104 3.07328 7.19014 2.74902 7.6666C2 8.76721 2 10.2994 2 13.3636C2 16.4279 2 17.9601 2.74902 19.0607C3.07328 19.5371 3.48995 19.9462 3.97524 20.2646C5.09624 21 6.65675 21 9.77778 21Z" stroke="#1C274C" stroke-width="1.5" style="&#10;    stroke: #fff;&#10;"/>
-          <path d="M19 10H18" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" style="&#10;    stroke: #fff;&#10;"/>
+  </div>
+  <div class="page-content">
+    <div>
+      <input type="file" accept="image/*" capture="environment" #fileInput (change)="onFileSelected($event)"
+        style="display: none" />
+      <button (click)="fileInput.click()" class="w-100 btn btn-primary btn-gradient"
+        style="margin-bottom: 20px;display: flex;align-items: center;justify-content: center;">
+        <svg xmlns="http://www.w3.org/2000/svg" style="margin-inline-end: 3px;" width="20px" height="20px"
+          viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="13" r="3" stroke="#1C274C" stroke-width="1.5" style="&#10;    stroke: #fff;&#10;" />
+          <path
+            d="M9.77778 21H14.2222C17.3433 21 18.9038 21 20.0248 20.2646C20.51 19.9462 20.9267 19.5371 21.251 19.0607C22 17.9601 22 16.4279 22 13.3636C22 10.2994 22 8.76721 21.251 7.6666C20.9267 7.19014 20.51 6.78104 20.0248 6.46268C19.3044 5.99013 18.4027 5.82123 17.022 5.76086C16.3631 5.76086 15.7959 5.27068 15.6667 4.63636C15.4728 3.68489 14.6219 3 13.6337 3H10.3663C9.37805 3 8.52715 3.68489 8.33333 4.63636C8.20412 5.27068 7.63685 5.76086 6.978 5.76086C5.59733 5.82123 4.69555 5.99013 3.97524 6.46268C3.48995 6.78104 3.07328 7.19014 2.74902 7.6666C2 8.76721 2 10.2994 2 13.3636C2 16.4279 2 17.9601 2.74902 19.0607C3.07328 19.5371 3.48995 19.9462 3.97524 20.2646C5.09624 21 6.65675 21 9.77778 21Z"
+            stroke="#1C274C" stroke-width="1.5" style="&#10;    stroke: #fff;&#10;" />
+          <path d="M19 10H18" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"
+            style="&#10;    stroke: #fff;&#10;" />
         </svg>
         Open Camera
       </button>
 
-      <img
-  *ngIf="previewUrl"
-  [src]="previewUrl"
-  alt="Preview"
-  style="max-width: 100%; border-radius: 8px; margin-bottom: 20px;"
-/>
-
-        <ng-container *ngIf="true">
-            <div class="voucher-wrapper" (click)="SelectedVoucher()">
-                <div class="voucher-content">
-                    <div class="voucher_top">
-                        <div class="voucher-icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="24" cy="24" r="24" fill="#FFF2E6"/>
-                                <path d="M36.3686 18.198V20.4719C34.9633 21.072 33.9799 22.4535 33.9799 24.0618C33.9799 25.6701 34.9633 27.0516 36.3686 27.6517V29.9255C36.3686 32.0845 34.7983 33.529 32.4106 33.8348C25.8425 34.676 22.1691 34.6817 15.5894 33.8348C13.2678 33.536 11.6314 32.0845 11.6314 29.9255V27.6518C13.0368 27.0518 14.0203 25.6702 14.0203 24.0618C14.0203 22.4534 13.0368 21.0718 11.6314 20.4718V18.198C11.6314 16.039 13.2836 14.675 15.5894 14.2888C22.091 13.1998 25.8153 13.3636 32.4106 14.2888C34.5915 14.5948 36.3686 16.039 36.3686 18.198Z" stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M20.2333 21.7301C21.2626 21.7301 22.0971 20.8957 22.0971 19.8663C22.0971 18.8369 21.2626 18.0024 20.2333 18.0024C19.2039 18.0024 18.3694 18.8369 18.3694 19.8663C18.3694 20.8957 19.2039 21.7301 20.2333 21.7301Z" stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M27.8447 29.3806C28.8741 29.3806 29.7086 28.5462 29.7086 27.5168C29.7086 26.4874 28.8741 25.653 27.8447 25.653C26.8154 25.653 25.9809 26.4874 25.9809 27.5168C25.9809 28.5462 26.8154 29.3806 27.8447 29.3806Z" stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M19.6349 28.0371C23.4886 24.8659 25.4143 22.9622 28.3646 19.3075" stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>                            
-                        </div>
-                        <div class="voucher-content">
-                            <p class="voucher_currency">500 EGP</p>
-                            <p class="voucher_Points">1000 Points</p>
-                        </div>
-                    </div>
-                    <div class="voucher_bottom">
-                        Get This Voucher
-                    </div>
-                </div>
-            </div>
-            <div class="voucher-wrapper" (click)="SelectedVoucher()">
-                <div class="voucher-content">
-                    <div class="voucher_top">
-                        <div class="voucher-icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="24" cy="24" r="24" fill="#FFF2E6"/>
-                                <path d="M36.3686 18.198V20.4719C34.9633 21.072 33.9799 22.4535 33.9799 24.0618C33.9799 25.6701 34.9633 27.0516 36.3686 27.6517V29.9255C36.3686 32.0845 34.7983 33.529 32.4106 33.8348C25.8425 34.676 22.1691 34.6817 15.5894 33.8348C13.2678 33.536 11.6314 32.0845 11.6314 29.9255V27.6518C13.0368 27.0518 14.0203 25.6702 14.0203 24.0618C14.0203 22.4534 13.0368 21.0718 11.6314 20.4718V18.198C11.6314 16.039 13.2836 14.675 15.5894 14.2888C22.091 13.1998 25.8153 13.3636 32.4106 14.2888C34.5915 14.5948 36.3686 16.039 36.3686 18.198Z" stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M20.2333 21.7301C21.2626 21.7301 22.0971 20.8957 22.0971 19.8663C22.0971 18.8369 21.2626 18.0024 20.2333 18.0024C19.2039 18.0024 18.3694 18.8369 18.3694 19.8663C18.3694 20.8957 19.2039 21.7301 20.2333 21.7301Z" stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M27.8447 29.3806C28.8741 29.3806 29.7086 28.5462 29.7086 27.5168C29.7086 26.4874 28.8741 25.653 27.8447 25.653C26.8154 25.653 25.9809 26.4874 25.9809 27.5168C25.9809 28.5462 26.8154 29.3806 27.8447 29.3806Z" stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M19.6349 28.0371C23.4886 24.8659 25.4143 22.9622 28.3646 19.3075" stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>                            
-                        </div>
-                        <div class="voucher-content">
-                            <p class="voucher_currency">500 EGP</p>
-                            <p class="voucher_Points">1000 Points</p>
-                        </div>
-                    </div>
-                    <div class="voucher_bottom">
-                        Get This Voucher
-                    </div>
-                </div>
-            </div>
-            <div class="voucher-wrapper" (click)="SelectedVoucher()">
-                <div class="voucher-content">
-                    <div class="voucher_top">
-                        <div class="voucher-icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="24" cy="24" r="24" fill="#FFF2E6"/>
-                                <path d="M36.3686 18.198V20.4719C34.9633 21.072 33.9799 22.4535 33.9799 24.0618C33.9799 25.6701 34.9633 27.0516 36.3686 27.6517V29.9255C36.3686 32.0845 34.7983 33.529 32.4106 33.8348C25.8425 34.676 22.1691 34.6817 15.5894 33.8348C13.2678 33.536 11.6314 32.0845 11.6314 29.9255V27.6518C13.0368 27.0518 14.0203 25.6702 14.0203 24.0618C14.0203 22.4534 13.0368 21.0718 11.6314 20.4718V18.198C11.6314 16.039 13.2836 14.675 15.5894 14.2888C22.091 13.1998 25.8153 13.3636 32.4106 14.2888C34.5915 14.5948 36.3686 16.039 36.3686 18.198Z" stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M20.2333 21.7301C21.2626 21.7301 22.0971 20.8957 22.0971 19.8663C22.0971 18.8369 21.2626 18.0024 20.2333 18.0024C19.2039 18.0024 18.3694 18.8369 18.3694 19.8663C18.3694 20.8957 19.2039 21.7301 20.2333 21.7301Z" stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M27.8447 29.3806C28.8741 29.3806 29.7086 28.5462 29.7086 27.5168C29.7086 26.4874 28.8741 25.653 27.8447 25.653C26.8154 25.653 25.9809 26.4874 25.9809 27.5168C25.9809 28.5462 26.8154 29.3806 27.8447 29.3806Z" stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M19.6349 28.0371C23.4886 24.8659 25.4143 22.9622 28.3646 19.3075" stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>                            
-                        </div>
-                        <div class="voucher-content">
-                            <p class="voucher_currency">500 EGP</p>
-                            <p class="voucher_Points">1000 Points</p>
-                        </div>
-                    </div>
-                    <div class="voucher_bottom">
-                        Get This Voucher
-                    </div>
-                </div>
-            </div>
-    
-            <div class="collapsible-item">
-                <div class="header" (click)="toggleCollapse()">
-                  <span>How does it work?</span>
-                  <span class="arrow" [class.expanded]="isExpanded">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12" cy="12" r="11.5" transform="matrix(-1 0 0 1 24 0)" fill="#F3F3F5" stroke="#F3F3F5"/>
-                        <path d="M14.75 11.125L12 13.875L9.25 11.125" stroke="#948F8D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                    
-                  </span>
-                </div>
-                <div class="body" [@collapseExpand]="isExpanded ? 'expanded' : 'collapsed'">
-                  <ul>
-                    <li>aaaaaa</li>
-                    <li>bbbbbb</li>
-                    <li>cccccc</li>
-                  </ul>
-                </div>
-            </div>
-        </ng-container>
-        
-        <ng-container *ngIf="true">
-            <div class="error-section">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_244_1234)">
-                    <path d="M12 18.75C11.9258 18.75 11.8533 18.772 11.7917 18.8132C11.73 18.8544 11.6819 18.913 11.6535 18.9815C11.6252 19.05 11.6177 19.1254 11.6322 19.1982C11.6467 19.2709 11.6824 19.3377 11.7348 19.3902C11.7873 19.4426 11.8541 19.4783 11.9268 19.4928C11.9996 19.5073 12.075 19.4998 12.1435 19.4715C12.212 19.4431 12.2706 19.395 12.3118 19.3333C12.353 19.2717 12.375 19.1992 12.375 19.125C12.375 19.0255 12.3355 18.9302 12.2652 18.8598C12.1948 18.7895 12.0995 18.75 12 18.75Z" stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 15.75V8.25" stroke="#F16E00" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
-                    <path d="M13.621 1.76001C13.4722 1.45702 13.2414 1.20181 12.9549 1.02333C12.6684 0.844851 12.3376 0.750244 12 0.750244C11.6624 0.750244 11.3316 0.844851 11.0451 1.02333C10.7586 1.20181 10.5278 1.45702 10.379 1.76001L0.905994 21.058C0.791964 21.29 0.738931 21.5472 0.751901 21.8053C0.764871 22.0635 0.843416 22.3141 0.980122 22.5334C1.11683 22.7528 1.30718 22.9337 1.53322 23.0591C1.75926 23.1845 2.01352 23.2502 2.27199 23.25H21.728C21.9865 23.2502 22.2407 23.1845 22.4668 23.0591C22.6928 22.9337 22.8832 22.7528 23.0199 22.5334C23.1566 22.3141 23.2351 22.0635 23.2481 21.8053C23.2611 21.5472 23.208 21.29 23.094 21.058L13.621 1.76001Z" stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </g>
-                    <defs>
-                    <clipPath id="clip0_244_1234">
-                    <rect width="24" height="24" fill="white"/>
-                    </clipPath>
-                    </defs>
-                </svg>
-                <p>AmazonLoyality Vouchers couldn’t be loaded. <a>Back To Dashboard</a></p>
-            </div>
-        </ng-container>
-          
-          
+      <img *ngIf="previewUrl" [src]="previewUrl" alt="Preview"
+        style="max-width: 100%; border-radius: 8px; margin-bottom: 20px;" />
     </div>
-  </section>
+    <div>
+      <button (click)="getLocation()" class="w-100 btn btn-primary btn-gradient"
+        style="margin-bottom: 20px;display: flex;align-items: center;justify-content: center;">
+        <svg style="margin-inline-end: 3px;" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="20px"
+          height="20px" viewBox="-4 0 32 32" version="1.1">
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+            <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-104.000000, -411.000000)" fill="#000000"
+              style="&#10;    fill: #fff;&#10;">
+              <path
+                d="M116,426 C114.343,426 113,424.657 113,423 C113,421.343 114.343,420 116,420 C117.657,420 119,421.343 119,423 C119,424.657 117.657,426 116,426 L116,426 Z M116,418 C113.239,418 111,420.238 111,423 C111,425.762 113.239,428 116,428 C118.761,428 121,425.762 121,423 C121,420.238 118.761,418 116,418 L116,418 Z M116,440 C114.337,440.009 106,427.181 106,423 C106,417.478 110.477,413 116,413 C121.523,413 126,417.478 126,423 C126,427.125 117.637,440.009 116,440 L116,440 Z M116,411 C109.373,411 104,416.373 104,423 C104,428.018 114.005,443.011 116,443 C117.964,443.011 128,427.95 128,423 C128,416.373 122.627,411 116,411 L116,411 Z"
+                id="location" sketch:type="MSShapeGroup" style="&#10;">
+
+              </path>
+            </g>
+          </g>
+        </svg>
+        Get My Location
+      </button>
+      <!-- Display Latitude and Longitude -->
+      <div *ngIf="latitude && longitude; else noLocation">
+        <p><strong>Latitude:</strong> {{ latitude }}</p>
+        <p><strong>Longitude:</strong> {{ longitude }}</p>
+      </div>
+    </div>
+
+
+    <ng-template #noLocation>
+      <p *ngIf="error" style="color: red">{{ error }}</p>
+    </ng-template>
+
+    <ng-container *ngIf="true">
+      <div class="voucher-wrapper" (click)="SelectedVoucher()">
+        <div class="voucher-content">
+          <div class="voucher_top">
+            <div class="voucher-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="24" fill="#FFF2E6" />
+                <path
+                  d="M36.3686 18.198V20.4719C34.9633 21.072 33.9799 22.4535 33.9799 24.0618C33.9799 25.6701 34.9633 27.0516 36.3686 27.6517V29.9255C36.3686 32.0845 34.7983 33.529 32.4106 33.8348C25.8425 34.676 22.1691 34.6817 15.5894 33.8348C13.2678 33.536 11.6314 32.0845 11.6314 29.9255V27.6518C13.0368 27.0518 14.0203 25.6702 14.0203 24.0618C14.0203 22.4534 13.0368 21.0718 11.6314 20.4718V18.198C11.6314 16.039 13.2836 14.675 15.5894 14.2888C22.091 13.1998 25.8153 13.3636 32.4106 14.2888C34.5915 14.5948 36.3686 16.039 36.3686 18.198Z"
+                  stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M20.2333 21.7301C21.2626 21.7301 22.0971 20.8957 22.0971 19.8663C22.0971 18.8369 21.2626 18.0024 20.2333 18.0024C19.2039 18.0024 18.3694 18.8369 18.3694 19.8663C18.3694 20.8957 19.2039 21.7301 20.2333 21.7301Z"
+                  stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M27.8447 29.3806C28.8741 29.3806 29.7086 28.5462 29.7086 27.5168C29.7086 26.4874 28.8741 25.653 27.8447 25.653C26.8154 25.653 25.9809 26.4874 25.9809 27.5168C25.9809 28.5462 26.8154 29.3806 27.8447 29.3806Z"
+                  stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19.6349 28.0371C23.4886 24.8659 25.4143 22.9622 28.3646 19.3075" stroke="#F16E00"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="voucher-content">
+              <p class="voucher_currency">500 EGP</p>
+              <p class="voucher_Points">1000 Points</p>
+            </div>
+          </div>
+          <div class="voucher_bottom">
+            Get This Voucher
+          </div>
+        </div>
+      </div>
+      <div class="voucher-wrapper" (click)="SelectedVoucher()">
+        <div class="voucher-content">
+          <div class="voucher_top">
+            <div class="voucher-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="24" fill="#FFF2E6" />
+                <path
+                  d="M36.3686 18.198V20.4719C34.9633 21.072 33.9799 22.4535 33.9799 24.0618C33.9799 25.6701 34.9633 27.0516 36.3686 27.6517V29.9255C36.3686 32.0845 34.7983 33.529 32.4106 33.8348C25.8425 34.676 22.1691 34.6817 15.5894 33.8348C13.2678 33.536 11.6314 32.0845 11.6314 29.9255V27.6518C13.0368 27.0518 14.0203 25.6702 14.0203 24.0618C14.0203 22.4534 13.0368 21.0718 11.6314 20.4718V18.198C11.6314 16.039 13.2836 14.675 15.5894 14.2888C22.091 13.1998 25.8153 13.3636 32.4106 14.2888C34.5915 14.5948 36.3686 16.039 36.3686 18.198Z"
+                  stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M20.2333 21.7301C21.2626 21.7301 22.0971 20.8957 22.0971 19.8663C22.0971 18.8369 21.2626 18.0024 20.2333 18.0024C19.2039 18.0024 18.3694 18.8369 18.3694 19.8663C18.3694 20.8957 19.2039 21.7301 20.2333 21.7301Z"
+                  stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M27.8447 29.3806C28.8741 29.3806 29.7086 28.5462 29.7086 27.5168C29.7086 26.4874 28.8741 25.653 27.8447 25.653C26.8154 25.653 25.9809 26.4874 25.9809 27.5168C25.9809 28.5462 26.8154 29.3806 27.8447 29.3806Z"
+                  stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19.6349 28.0371C23.4886 24.8659 25.4143 22.9622 28.3646 19.3075" stroke="#F16E00"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="voucher-content">
+              <p class="voucher_currency">500 EGP</p>
+              <p class="voucher_Points">1000 Points</p>
+            </div>
+          </div>
+          <div class="voucher_bottom">
+            Get This Voucher
+          </div>
+        </div>
+      </div>
+      <div class="voucher-wrapper" (click)="SelectedVoucher()">
+        <div class="voucher-content">
+          <div class="voucher_top">
+            <div class="voucher-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="24" fill="#FFF2E6" />
+                <path
+                  d="M36.3686 18.198V20.4719C34.9633 21.072 33.9799 22.4535 33.9799 24.0618C33.9799 25.6701 34.9633 27.0516 36.3686 27.6517V29.9255C36.3686 32.0845 34.7983 33.529 32.4106 33.8348C25.8425 34.676 22.1691 34.6817 15.5894 33.8348C13.2678 33.536 11.6314 32.0845 11.6314 29.9255V27.6518C13.0368 27.0518 14.0203 25.6702 14.0203 24.0618C14.0203 22.4534 13.0368 21.0718 11.6314 20.4718V18.198C11.6314 16.039 13.2836 14.675 15.5894 14.2888C22.091 13.1998 25.8153 13.3636 32.4106 14.2888C34.5915 14.5948 36.3686 16.039 36.3686 18.198Z"
+                  stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M20.2333 21.7301C21.2626 21.7301 22.0971 20.8957 22.0971 19.8663C22.0971 18.8369 21.2626 18.0024 20.2333 18.0024C19.2039 18.0024 18.3694 18.8369 18.3694 19.8663C18.3694 20.8957 19.2039 21.7301 20.2333 21.7301Z"
+                  stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M27.8447 29.3806C28.8741 29.3806 29.7086 28.5462 29.7086 27.5168C29.7086 26.4874 28.8741 25.653 27.8447 25.653C26.8154 25.653 25.9809 26.4874 25.9809 27.5168C25.9809 28.5462 26.8154 29.3806 27.8447 29.3806Z"
+                  stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19.6349 28.0371C23.4886 24.8659 25.4143 22.9622 28.3646 19.3075" stroke="#F16E00"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="voucher-content">
+              <p class="voucher_currency">500 EGP</p>
+              <p class="voucher_Points">1000 Points</p>
+            </div>
+          </div>
+          <div class="voucher_bottom">
+            Get This Voucher
+          </div>
+        </div>
+      </div>
+
+      <div class="collapsible-item">
+        <div class="header" (click)="toggleCollapse()">
+          <span>How does it work?</span>
+          <span class="arrow" [class.expanded]="isExpanded">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="11.5" transform="matrix(-1 0 0 1 24 0)" fill="#F3F3F5" stroke="#F3F3F5" />
+              <path d="M14.75 11.125L12 13.875L9.25 11.125" stroke="#948F8D" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </span>
+        </div>
+        <div class="body" [@collapseExpand]="isExpanded ? 'expanded' : 'collapsed'">
+          <ul>
+            <li>aaaaaa</li>
+            <li>bbbbbb</li>
+            <li>cccccc</li>
+          </ul>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="true">
+      <div class="error-section">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_244_1234)">
+            <path
+              d="M12 18.75C11.9258 18.75 11.8533 18.772 11.7917 18.8132C11.73 18.8544 11.6819 18.913 11.6535 18.9815C11.6252 19.05 11.6177 19.1254 11.6322 19.1982C11.6467 19.2709 11.6824 19.3377 11.7348 19.3902C11.7873 19.4426 11.8541 19.4783 11.9268 19.4928C11.9996 19.5073 12.075 19.4998 12.1435 19.4715C12.212 19.4431 12.2706 19.395 12.3118 19.3333C12.353 19.2717 12.375 19.1992 12.375 19.125C12.375 19.0255 12.3355 18.9302 12.2652 18.8598C12.1948 18.7895 12.0995 18.75 12 18.75Z"
+              stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M12 15.75V8.25" stroke="#F16E00" stroke-width="1.5" stroke-miterlimit="10"
+              stroke-linecap="round" />
+            <path
+              d="M13.621 1.76001C13.4722 1.45702 13.2414 1.20181 12.9549 1.02333C12.6684 0.844851 12.3376 0.750244 12 0.750244C11.6624 0.750244 11.3316 0.844851 11.0451 1.02333C10.7586 1.20181 10.5278 1.45702 10.379 1.76001L0.905994 21.058C0.791964 21.29 0.738931 21.5472 0.751901 21.8053C0.764871 22.0635 0.843416 22.3141 0.980122 22.5334C1.11683 22.7528 1.30718 22.9337 1.53322 23.0591C1.75926 23.1845 2.01352 23.2502 2.27199 23.25H21.728C21.9865 23.2502 22.2407 23.1845 22.4668 23.0591C22.6928 22.9337 22.8832 22.7528 23.0199 22.5334C23.1566 22.3141 23.2351 22.0635 23.2481 21.8053C23.2611 21.5472 23.208 21.29 23.094 21.058L13.621 1.76001Z"
+              stroke="#F16E00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </g>
+          <defs>
+            <clipPath id="clip0_244_1234">
+              <rect width="24" height="24" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+        <p>AmazonLoyality Vouchers couldn’t be loaded. <a>Back To Dashboard</a></p>
+      </div>
+    </ng-container>
+
+
+  </div>
+</section>
 
 <!-- popup OTP  -->
 <div *ngIf="showOtp" class="Offer-details_modal">
@@ -187,8 +241,10 @@
       <a class="btn_close" *ngIf="showOtp" (click)="CloseOtp()">
         <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="20.5" cy="20" r="19.5" fill="white" stroke="#F0EEED" />
-          <path d="M15.5 25L25.5 15" stroke="#24180E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M25.5 25L15.5 15" stroke="#24180E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M15.5 25L25.5 15" stroke="#24180E" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path d="M25.5 25L15.5 15" stroke="#24180E" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
         </svg>
       </a>
     </div>
@@ -214,14 +270,7 @@
 </div>
 
 <!-- popup status  -->
-<app-popup
-[show_popup]="showPopup"
-[popup_icon]="PopupIcon"
-[popup_title]="PopupTitle"
-[popup_description]="PopupDescription"
-[popup_id]="PopupId" 
-[popup_btn_name]="PopupBtnName" 
-[popup_close]="PopupClose"
-(close_popup)="closePopup()" 
-(popup_function)="PopupStatusBtnFunction()">
+<app-popup [show_popup]="showPopup" [popup_icon]="PopupIcon" [popup_title]="PopupTitle"
+  [popup_description]="PopupDescription" [popup_id]="PopupId" [popup_btn_name]="PopupBtnName" [popup_close]="PopupClose"
+  (close_popup)="closePopup()" (popup_function)="PopupStatusBtnFunction()">
 </app-popup>
