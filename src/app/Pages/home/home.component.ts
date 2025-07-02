@@ -24,6 +24,7 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   isExpanded = false;
+  previewUrl: string | null = null;
 
   /// otp
   showOtp: boolean = false;
@@ -54,6 +55,20 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+  }
+
+  onFileSelected(event: Event): void {
+    const input = event.target as HTMLInputElement;
+
+    if (input.files && input.files.length > 0) {
+      const file = input.files[0];
+
+      const reader = new FileReader();
+      reader.onload = () => {
+        this.previewUrl = reader.result as string;
+      };
+      reader.readAsDataURL(file); // convert image to base64 for preview
+    }
   }
 
   SelectedVoucher() {
