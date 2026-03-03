@@ -1046,7 +1046,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const _c0 = ["ngOtpInput"];
-const _c1 = ["preview"];
 function HomeComponent_img_43_Template(rf, ctx) {
   if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnamespaceSVG"]();
@@ -1114,7 +1113,7 @@ function HomeComponent_button_58_Template(rf, ctx) {
       const ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
       return _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵresetView"](ctx_r11.startRecording());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, "Start Recording");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, "\u0627\u0628\u062F\u0623 \u0627\u0644\u062A\u0633\u062C\u064A\u0644");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
   }
 }
@@ -1127,14 +1126,14 @@ function HomeComponent_button_59_Template(rf, ctx) {
       const ctx_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
       return _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵresetView"](ctx_r13.stopRecording());
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, "Stop Recording");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1, "\u0625\u064A\u0642\u0627\u0641 \u0648\u062D\u0641\u0638");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
   }
 }
 function HomeComponent_div_60_Template(rf, ctx) {
   if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div")(1, "h3");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](2, "Recorded Preview:");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](2, "\u0627\u0644\u0641\u064A\u062F\u064A\u0648 \u0627\u0644\u0645\u0633\u062C\u0644:");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](3, "video", 53);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
@@ -1187,7 +1186,7 @@ function HomeComponent_div_61_a_14_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
   }
 }
-const _c2 = function (a0) {
+const _c1 = function (a0) {
   return {
     length: a0,
     allowNumbersOnly: true,
@@ -1232,7 +1231,7 @@ function HomeComponent_div_61_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](6);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx_r9.showOtp);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("config", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction1"](5, _c2, ctx_r9.otpLength));
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("config", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction1"](5, _c1, ctx_r9.otpLength));
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", !ctx_r9.showResend);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
@@ -1268,52 +1267,42 @@ class HomeComponent {
     this.PopupId = "";
     this.PopupBtnName = "";
     this.PopupClose = false;
-    this.recordedBlobs = [];
     this.isRecording = false;
+    this.chunks = [];
   }
   ngOnInit() {
-    var _this = this;
-    return (0,C_My_Device_Others_pwa_New_folder_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
-      try {
-        // Constraints for mobile: 'environment' for back camera, 'user' for front
-        _this.stream = yield navigator.mediaDevices.getUserMedia({
-          video: {
-            facingMode: 'environment'
-          },
-          audio: true
-        });
-      } catch (err) {
-        console.error("Error accessing camera:", err);
-      }
-    })();
+    throw new Error('Method not implemented.');
   }
   startRecording() {
-    if (!this.stream) return;
-    this.recordedBlobs = [];
-    this.mediaRecorder = new MediaRecorder(this.stream, {
-      mimeType: 'video/webm'
-    });
-    this.mediaRecorder.ondataavailable = event => {
-      if (event.data && event.data.size > 0) {
-        this.recordedBlobs.push(event.data);
-      }
-    };
-    this.mediaRecorder.onstop = () => {
-      const videoBlob = new Blob(this.recordedBlobs, {
-        type: 'video/webm'
+    var _this = this;
+    return (0,C_My_Device_Others_pwa_New_folder_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+      _this.recordedVideoUrl = undefined; // مسح أي فيديو قديم
+      _this.chunks = [];
+      // 1. فتح الكاميرا
+      _this.stream = yield navigator.mediaDevices.getUserMedia({
+        video: true,
+        audio: true
       });
-      this.recordedVideoUrl = URL.createObjectURL(videoBlob);
-    };
-    this.mediaRecorder.start();
-    this.isRecording = true;
+      // 2. تجهيز المسجل
+      _this.mediaRecorder = new MediaRecorder(_this.stream);
+      // 3. تجميع البيانات
+      _this.mediaRecorder.ondataavailable = e => _this.chunks.push(e.data);
+      // 4. عند الإيقاف: تحويل البيانات لفيديو قابل للعرض
+      _this.mediaRecorder.onstop = () => {
+        const blob = new Blob(_this.chunks, {
+          type: 'video/mp4'
+        });
+        _this.recordedVideoUrl = URL.createObjectURL(blob);
+        // قفل الكاميرا تماماً لتوفير البطارية
+        _this.stream?.getTracks().forEach(track => track.stop());
+      };
+      _this.mediaRecorder.start();
+      _this.isRecording = true;
+    })();
   }
   stopRecording() {
     this.mediaRecorder?.stop();
     this.isRecording = false;
-  }
-  ngOnDestroy() {
-    // Clean up camera on close
-    this.stream?.getTracks().forEach(track => track.stop());
   }
   onFileSelected(event) {
     const input = event.target;
@@ -1452,17 +1441,15 @@ class HomeComponent {
       viewQuery: function HomeComponent_Query(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵviewQuery"](_c0, 5);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵviewQuery"](_c1, 5);
         }
         if (rf & 2) {
           let _t;
           _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵloadQuery"]()) && (ctx.ngOtpInputRef = _t.first);
-          _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵloadQuery"]()) && (ctx.previewElement = _t.first);
         }
       },
       decls: 63,
       vars: 15,
-      consts: [[1, "main-section", "page-wrapper"], [1, "page-wrapper__top"], [1, "offer-header"], [1, "offer-name"], [1, "btn-back-page", "reverse-rtl", "border-0", 3, "click"], ["width", "40", "height", "40", "viewBox", "0 0 40 40", "fill", "none", "xmlns", "http://www.w3.org/2000/svg"], ["filter", "url(#filter0_b_513_123)"], ["cx", "20", "cy", "20", "r", "20", "fill", "white", "fill-opacity", "0.1"], ["cx", "20", "cy", "20", "r", "19.5", "stroke", "url(#paint0_linear_513_123)"], ["clip-path", "url(#clip0_513_123)"], ["d", "M21.3492 24.5833L16.9841 20L21.3492 15.4167", "stroke", "white", "stroke-width", "1.5", "stroke-linecap", "round", "stroke-linejoin", "round"], ["id", "filter0_b_513_123", "x", "-4", "y", "-4", "width", "48", "height", "48", "filterUnits", "userSpaceOnUse", "color-interpolation-filters", "sRGB"], ["flood-opacity", "0", "result", "BackgroundImageFix"], ["in", "BackgroundImageFix", "stdDeviation", "2"], ["in2", "SourceAlpha", "operator", "in", "result", "effect1_backgroundBlur_513_123"], ["mode", "normal", "in", "SourceGraphic", "in2", "effect1_backgroundBlur_513_123", "result", "shape"], ["id", "paint0_linear_513_123", "x1", "4.46483", "y1", "-8.57141", "x2", "43.1484", "y2", "-6.73257", "gradientUnits", "userSpaceOnUse"], ["stop-color", "#FFFCFA"], ["offset", "1", "stop-color", "white", "stop-opacity", "0"], ["id", "clip0_513_123"], ["width", "20", "height", "20", "fill", "white", "transform", "translate(10 10)"], [1, "page-title"], [2, "width", "40px"], [1, "points-wrapper"], [1, "points-content"], [1, "points-title"], [1, "page-content"], ["type", "file", "accept", "image/*", "capture", "environment", 2, "display", "none", 3, "change"], ["fileInput", ""], [1, "w-100", "btn", "btn-primary", "btn-gradient", 2, "margin-bottom", "20px", "display", "flex", "align-items", "center", "justify-content", "center", 3, "click"], ["xmlns", "http://www.w3.org/2000/svg", "width", "20px", "height", "20px", "viewBox", "0 0 24 24", "fill", "none", 2, "margin-inline-end", "3px"], ["cx", "12", "cy", "13", "r", "3", "stroke", "#1C274C", "stroke-width", "1.5", 2, "stroke", "#fff"], ["d", "M9.77778 21H14.2222C17.3433 21 18.9038 21 20.0248 20.2646C20.51 19.9462 20.9267 19.5371 21.251 19.0607C22 17.9601 22 16.4279 22 13.3636C22 10.2994 22 8.76721 21.251 7.6666C20.9267 7.19014 20.51 6.78104 20.0248 6.46268C19.3044 5.99013 18.4027 5.82123 17.022 5.76086C16.3631 5.76086 15.7959 5.27068 15.6667 4.63636C15.4728 3.68489 14.6219 3 13.6337 3H10.3663C9.37805 3 8.52715 3.68489 8.33333 4.63636C8.20412 5.27068 7.63685 5.76086 6.978 5.76086C5.59733 5.82123 4.69555 5.99013 3.97524 6.46268C3.48995 6.78104 3.07328 7.19014 2.74902 7.6666C2 8.76721 2 10.2994 2 13.3636C2 16.4279 2 17.9601 2.74902 19.0607C3.07328 19.5371 3.48995 19.9462 3.97524 20.2646C5.09624 21 6.65675 21 9.77778 21Z", "stroke", "#1C274C", "stroke-width", "1.5", 2, "stroke", "#fff"], ["d", "M19 10H18", "stroke", "#1C274C", "stroke-width", "1.5", "stroke-linecap", "round", 2, "stroke", "#fff"], ["alt", "Preview", "style", "max-width: 100%; border-radius: 8px; margin-bottom: 20px;", 3, "src", 4, "ngIf"], ["xmlns", "http://www.w3.org/2000/svg", 0, "xmlns", "xlink", "http://www.w3.org/1999/xlink", 0, "xmlns", "sketch", "http://www.bohemiancoding.com/sketch/ns", "width", "20px", "height", "20px", "viewBox", "-4 0 32 32", "version", "1.1", 2, "margin-inline-end", "3px"], ["id", "Page-1", "stroke", "none", "stroke-width", "1", "fill", "none", "fill-rule", "evenodd", 0, "sketch", "type", "MSPage"], ["id", "Icon-Set", 0, "sketch", "type", "MSLayerGroup", "transform", "translate(-104.000000, -411.000000)", "fill", "#000000", 2, "fill", "#fff"], ["d", "M116,426 C114.343,426 113,424.657 113,423 C113,421.343 114.343,420 116,420 C117.657,420 119,421.343 119,423 C119,424.657 117.657,426 116,426 L116,426 Z M116,418 C113.239,418 111,420.238 111,423 C111,425.762 113.239,428 116,428 C118.761,428 121,425.762 121,423 C121,420.238 118.761,418 116,418 L116,418 Z M116,440 C114.337,440.009 106,427.181 106,423 C106,417.478 110.477,413 116,413 C121.523,413 126,417.478 126,423 C126,427.125 117.637,440.009 116,440 L116,440 Z M116,411 C109.373,411 104,416.373 104,423 C104,428.018 114.005,443.011 116,443 C117.964,443.011 128,427.95 128,423 C128,416.373 122.627,411 116,411 L116,411 Z", "id", "location", 0, "sketch", "type", "MSShapeGroup"], [4, "ngIf", "ngIfElse"], ["noLocation", ""], [1, "camera-container"], ["autoplay", "", "muted", "", "playsinline", "", 3, "srcObject"], ["preview", ""], [1, "controls"], [3, "click", 4, "ngIf"], [4, "ngIf"], ["class", "Offer-details_modal", 4, "ngIf"], [3, "show_popup", "popup_icon", "popup_title", "popup_description", "popup_id", "popup_btn_name", "popup_close", "close_popup", "popup_function"], ["alt", "Preview", 2, "max-width", "100%", "border-radius", "8px", "margin-bottom", "20px", 3, "src"], ["style", "color: red", 4, "ngIf"], [2, "color", "red"], [3, "click"], ["controls", "", "playsinline", "", "width", "100%", 3, "src"], [1, "Offer-details_modal"], [1, "Offer-details_close"], [1, "Offer-details_content"], [1, "offer-details_head"], [1, "offer-popup__title"], ["class", "btn_close", 3, "click", 4, "ngIf"], [1, "offer-popup__desc"], [1, "otp_inputs", "dir-ltr", "mb-4"], [3, "config", "onInputChange"], ["ngOtpInput", ""], [1, "otp-wrapper"], ["class", "otp-counter", 4, "ngIf"], ["class", "otp-resend", 3, "click", 4, "ngIf"], [1, "mt-3", "mb-3", "d-flex"], [1, "w-100", "btn", "btn-gradient", 3, "disabled", "click"], [1, "btn_close", 3, "click"], ["width", "41", "height", "40", "viewBox", "0 0 41 40", "fill", "none", "xmlns", "http://www.w3.org/2000/svg"], ["cx", "20.5", "cy", "20", "r", "19.5", "fill", "white", "stroke", "#F0EEED"], ["d", "M15.5 25L25.5 15", "stroke", "#24180E", "stroke-width", "1.5", "stroke-linecap", "round", "stroke-linejoin", "round"], ["d", "M25.5 25L15.5 15", "stroke", "#24180E", "stroke-width", "1.5", "stroke-linecap", "round", "stroke-linejoin", "round"], [1, "otp-counter"], [1, "counter_sec"], [1, "otp-resend", 3, "click"]],
+      consts: [[1, "main-section", "page-wrapper"], [1, "page-wrapper__top"], [1, "offer-header"], [1, "offer-name"], [1, "btn-back-page", "reverse-rtl", "border-0", 3, "click"], ["width", "40", "height", "40", "viewBox", "0 0 40 40", "fill", "none", "xmlns", "http://www.w3.org/2000/svg"], ["filter", "url(#filter0_b_513_123)"], ["cx", "20", "cy", "20", "r", "20", "fill", "white", "fill-opacity", "0.1"], ["cx", "20", "cy", "20", "r", "19.5", "stroke", "url(#paint0_linear_513_123)"], ["clip-path", "url(#clip0_513_123)"], ["d", "M21.3492 24.5833L16.9841 20L21.3492 15.4167", "stroke", "white", "stroke-width", "1.5", "stroke-linecap", "round", "stroke-linejoin", "round"], ["id", "filter0_b_513_123", "x", "-4", "y", "-4", "width", "48", "height", "48", "filterUnits", "userSpaceOnUse", "color-interpolation-filters", "sRGB"], ["flood-opacity", "0", "result", "BackgroundImageFix"], ["in", "BackgroundImageFix", "stdDeviation", "2"], ["in2", "SourceAlpha", "operator", "in", "result", "effect1_backgroundBlur_513_123"], ["mode", "normal", "in", "SourceGraphic", "in2", "effect1_backgroundBlur_513_123", "result", "shape"], ["id", "paint0_linear_513_123", "x1", "4.46483", "y1", "-8.57141", "x2", "43.1484", "y2", "-6.73257", "gradientUnits", "userSpaceOnUse"], ["stop-color", "#FFFCFA"], ["offset", "1", "stop-color", "white", "stop-opacity", "0"], ["id", "clip0_513_123"], ["width", "20", "height", "20", "fill", "white", "transform", "translate(10 10)"], [1, "page-title"], [2, "width", "40px"], [1, "points-wrapper"], [1, "points-content"], [1, "points-title"], [1, "page-content"], ["type", "file", "accept", "image/*", "capture", "environment", 2, "display", "none", 3, "change"], ["fileInput", ""], [1, "w-100", "btn", "btn-primary", "btn-gradient", 2, "margin-bottom", "20px", "display", "flex", "align-items", "center", "justify-content", "center", 3, "click"], ["xmlns", "http://www.w3.org/2000/svg", "width", "20px", "height", "20px", "viewBox", "0 0 24 24", "fill", "none", 2, "margin-inline-end", "3px"], ["cx", "12", "cy", "13", "r", "3", "stroke", "#1C274C", "stroke-width", "1.5", 2, "stroke", "#fff"], ["d", "M9.77778 21H14.2222C17.3433 21 18.9038 21 20.0248 20.2646C20.51 19.9462 20.9267 19.5371 21.251 19.0607C22 17.9601 22 16.4279 22 13.3636C22 10.2994 22 8.76721 21.251 7.6666C20.9267 7.19014 20.51 6.78104 20.0248 6.46268C19.3044 5.99013 18.4027 5.82123 17.022 5.76086C16.3631 5.76086 15.7959 5.27068 15.6667 4.63636C15.4728 3.68489 14.6219 3 13.6337 3H10.3663C9.37805 3 8.52715 3.68489 8.33333 4.63636C8.20412 5.27068 7.63685 5.76086 6.978 5.76086C5.59733 5.82123 4.69555 5.99013 3.97524 6.46268C3.48995 6.78104 3.07328 7.19014 2.74902 7.6666C2 8.76721 2 10.2994 2 13.3636C2 16.4279 2 17.9601 2.74902 19.0607C3.07328 19.5371 3.48995 19.9462 3.97524 20.2646C5.09624 21 6.65675 21 9.77778 21Z", "stroke", "#1C274C", "stroke-width", "1.5", 2, "stroke", "#fff"], ["d", "M19 10H18", "stroke", "#1C274C", "stroke-width", "1.5", "stroke-linecap", "round", 2, "stroke", "#fff"], ["alt", "Preview", "style", "max-width: 100%; border-radius: 8px; margin-bottom: 20px;", 3, "src", 4, "ngIf"], ["xmlns", "http://www.w3.org/2000/svg", 0, "xmlns", "xlink", "http://www.w3.org/1999/xlink", 0, "xmlns", "sketch", "http://www.bohemiancoding.com/sketch/ns", "width", "20px", "height", "20px", "viewBox", "-4 0 32 32", "version", "1.1", 2, "margin-inline-end", "3px"], ["id", "Page-1", "stroke", "none", "stroke-width", "1", "fill", "none", "fill-rule", "evenodd", 0, "sketch", "type", "MSPage"], ["id", "Icon-Set", 0, "sketch", "type", "MSLayerGroup", "transform", "translate(-104.000000, -411.000000)", "fill", "#000000", 2, "fill", "#fff"], ["d", "M116,426 C114.343,426 113,424.657 113,423 C113,421.343 114.343,420 116,420 C117.657,420 119,421.343 119,423 C119,424.657 117.657,426 116,426 L116,426 Z M116,418 C113.239,418 111,420.238 111,423 C111,425.762 113.239,428 116,428 C118.761,428 121,425.762 121,423 C121,420.238 118.761,418 116,418 L116,418 Z M116,440 C114.337,440.009 106,427.181 106,423 C106,417.478 110.477,413 116,413 C121.523,413 126,417.478 126,423 C126,427.125 117.637,440.009 116,440 L116,440 Z M116,411 C109.373,411 104,416.373 104,423 C104,428.018 114.005,443.011 116,443 C117.964,443.011 128,427.95 128,423 C128,416.373 122.627,411 116,411 L116,411 Z", "id", "location", 0, "sketch", "type", "MSShapeGroup"], [4, "ngIf", "ngIfElse"], ["noLocation", ""], [2, "text-align", "center"], ["autoplay", "", "muted", "", "playsinline", "", 2, "width", "100%", "max-width", "500px", "background", "#000", 3, "srcObject"], ["preview", ""], [2, "margin", "20px"], [3, "click", 4, "ngIf"], [4, "ngIf"], ["class", "Offer-details_modal", 4, "ngIf"], [3, "show_popup", "popup_icon", "popup_title", "popup_description", "popup_id", "popup_btn_name", "popup_close", "close_popup", "popup_function"], ["alt", "Preview", 2, "max-width", "100%", "border-radius", "8px", "margin-bottom", "20px", 3, "src"], ["style", "color: red", 4, "ngIf"], [2, "color", "red"], [3, "click"], ["controls", "", "playsinline", "", 2, "width", "100%", "max-width", "500px", 3, "src"], [1, "Offer-details_modal"], [1, "Offer-details_close"], [1, "Offer-details_content"], [1, "offer-details_head"], [1, "offer-popup__title"], ["class", "btn_close", 3, "click", 4, "ngIf"], [1, "offer-popup__desc"], [1, "otp_inputs", "dir-ltr", "mb-4"], [3, "config", "onInputChange"], ["ngOtpInput", ""], [1, "otp-wrapper"], ["class", "otp-counter", 4, "ngIf"], ["class", "otp-resend", 3, "click", 4, "ngIf"], [1, "mt-3", "mb-3", "d-flex"], [1, "w-100", "btn", "btn-gradient", 3, "disabled", "click"], [1, "btn_close", 3, "click"], ["width", "41", "height", "40", "viewBox", "0 0 41 40", "fill", "none", "xmlns", "http://www.w3.org/2000/svg"], ["cx", "20.5", "cy", "20", "r", "19.5", "fill", "white", "stroke", "#F0EEED"], ["d", "M15.5 25L25.5 15", "stroke", "#24180E", "stroke-width", "1.5", "stroke-linecap", "round", "stroke-linejoin", "round"], ["d", "M25.5 25L15.5 15", "stroke", "#24180E", "stroke-width", "1.5", "stroke-linecap", "round", "stroke-linejoin", "round"], [1, "otp-counter"], [1, "counter_sec"], [1, "otp-resend", 3, "click"]],
       template: function HomeComponent_Template(rf, ctx) {
         if (rf & 1) {
           const _r26 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵgetCurrentView"]();
