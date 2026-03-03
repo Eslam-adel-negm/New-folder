@@ -1565,7 +1565,7 @@ class HomeComponent {
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](46, "svg", 35)(47, "g", 36)(48, "g", 37);
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](49, "path", 38);
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()()();
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](50, " Get My Location ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](50, " Get My Location test ");
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](51, HomeComponent_div_51_Template, 9, 2, "div", 39);
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
