@@ -1194,6 +1194,7 @@ class HomeComponent {
     this.otpLength = 6;
     this.isButtonDimmed = true;
     this.OtpCode = "";
+    this.errorMessage = '';
     /// popupS
     this.showPopup = false;
     this.PopupIcon = "";
@@ -1215,15 +1216,32 @@ class HomeComponent {
   }
   onFileSelectedV(event) {
     const file = event.target.files[0];
-    if (file) {
-      // تحويل الملف لرابط آمن للعرض في المتصفح
-      const url = URL.createObjectURL(file);
-      this.videoUrl = this.sanitizer.bypassSecurityTrustUrl(url);
-      console.log('تم التقاط الفيديو:', file);
-      // هنا الـ file هو الملف الحقيقي اللي تقدر ترفعه للسيرفر
-    }
+    if (!file) return;
+    // Reset messages and preview
+    this.errorMessage = '';
+    // Create a temporary video element to check metadata
+    const video = document.createElement('video');
+    video.preload = 'metadata';
+    video.onloadedmetadata = () => {
+      // Release memory from the temporary URL
+      window.URL.revokeObjectURL(video.src);
+      const duration = video.duration;
+      console.log('Video duration:', duration);
+      // Validation: Check if video is longer than 10 seconds
+      if (duration > 10) {
+        this.errorMessage = `Video is too long (${Math.round(duration)} seconds). Maximum allowed is 10 seconds.`;
+        this.videoUrl = undefined;
+        // Clear the input so the same file can't be submitted
+        document.getElementById('videoInput').value = '';
+      } else {
+        // If duration is valid, create the preview URL
+        const url = URL.createObjectURL(file);
+        this.videoUrl = this.sanitizer.bypassSecurityTrustUrl(url);
+      }
+    };
+    // Load the file into the temporary video element
+    video.src = URL.createObjectURL(file);
   }
-
   onFileSelected(event) {
     const input = event.target;
     if (input.files && input.files.length > 0) {
@@ -1417,7 +1435,7 @@ class HomeComponent {
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function HomeComponent_Template_button_click_38_listener() {
             return ctx.openCamera();
           });
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](39, "Open Camera\uD83C\uDFA5");
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](39, "Open Camera Video\uD83C\uDFA5");
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](40, HomeComponent_div_40_Template, 4, 1, "div", 31);
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()()();
