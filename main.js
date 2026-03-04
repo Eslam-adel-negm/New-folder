@@ -1424,7 +1424,7 @@ class HomeComponent {
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()()()();
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnamespaceHTML"]();
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](22, "span", 21);
-          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](23, "Video Recorded POC");
+          _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](23, "Video Record POC");
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](24, "div", 22);
           _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()()();
